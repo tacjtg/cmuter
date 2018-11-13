@@ -1,0 +1,151 @@
+/*--------------------------------------------------------------
+# Custom by JTG
+--------------------------------------------------------------*/
+body { -webkit-font-smoothing: antialiased;}
+header { position: relative; width: 100%; max-width: 1400px; margin: 0 auto;  }
+.home .header-block { position: absolute; width: 100%; max-width: 1140; }
+.page .header-block {width: 100%; max-width: 1140px; margin: 0 auto; }
+.site-branding { float: left; margin: 20px; }
+.site-branding img { width: auto; max-width: 100%; height: auto; max-height: 65px;  }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+button.toggle-overlay { position: absolute; top: 0; right: 0; z-index: 2; border:none; background: transparent; font-size: 32px; color: #ff4438; padding: 30px; }
+.cmuter-nav { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #ff4438/*linear-gradient(200deg, #27156E, #6A2A88, #9F4981)*/; transition: all .5s ease; z-index: 2; opacity: 0; visibility: hidden; }
+.open { opacity: .95; visibility: visible; }
+.close { position: fixed; top: 75px; right: 60px; color: white; z-index: 3; cursor: pointer; font-family: sans-serif; }
+.close span, .close span:before, .close span:after { border-radius: 4px; height: 5px; width: 35px; background: white; position: absolute; display: block; content: ''; }
+.close span { background: transparent; }
+.close span:before { transform: rotate(45deg); }
+.close span:after { transform: rotate(-45deg); }
+.main-navigation { text-align: center; height: 95vh; display: flex; flex-direction: column; justify-content: center; }
+.main-navigation ul { margin: 0; padding: 0; list-style: none; }
+.main-navigation li { align-items: center; flex: 1; float: none; }
+.main-navigation ul li a { font-size: 40px; transition: all 0.5s ease; display: block; text-decoration: none; color: #fff; text-transform: uppercase; font-family: 'Roboto', sans-serif; letter-spacing: 2px;}
+.main-navigation a:hover { color: rgba(255, 255, 255, .9); transform: scale(1.1); }
+.main-navigation a:hover:before { visibility: visible; transform: scaleX(1); }
+.main-navigation a:before { content: ""; position: absolute; width: 50%; height: 2px; bottom: 0; left: 25%; background: white; visibility: hidden; transform: scaleX(0); transition: all 0.3s ease-in-out 0s; }
+@media screen and (min-width: 600px) { nav ul li a { font-size: 3em; } }
+.outer-close { position: absolute; right:0; top:0; cursor: pointer; }
+
+/*--------------------------------------------------------------
+# Homescreen 1
+--------------------------------------------------------------*/
+.homescreen-1 { height:100vh; display: flex; align-items: center; justify-content: center; }
+.homescreen-1-content { margin: 0 150px; max-width: 450px; text-align: center;display: inline-block;  }
+.homescreen-1-content-left { background:url('../images/home-left.png'); height: 317px; width: 39px; }
+.homescreen-1-content-right { background:url('../images/home-right.png'); height: 317px; width: 39px; }
+.homescreen-1 h1 { font-size: 46px; font-weight: 700; color: #000; font-family: 'Montserrat', sans-serif; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 3px; line-height: 46px; transition: transform 2s ease-in;}
+.homescreen-1 a.cta {
+	font-family: 'Montserrat', sans-serif;
+    color: #ff4438 !important; line-height: 46px;
+    border: 2px solid #ff4438; padding: 10px 20px;
+    letter-spacing: 3px; font-weight: 700; font-size: 46px;
+    -webkit-border-radius: 3px; border-radius: 3px;
+    background-color: transparent !important;
+    text-decoration: none; text-transform: uppercase;
+}
+.homescreen-1-content a.cta:hover { background-color: #ff4438 !important; color: #fff !important; }
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.homescreen-1 h1 { font-size: 36px; line-height: 36px; }
+	.homescreen-1 a.cta { font-size: 36px; line-height: 36px; }
+	.homescreen-1-content { margin: 0 75px; }
+}
+@media screen and (max-width: 600px) {
+	.homescreen-1 h1 { font-size: 28px; line-height: 28px; }
+	.homescreen-1 a.cta { font-size: 28px; line-height: 28px; }
+	.homescreen-1-content { margin: 0 20px; }
+}
+
+/*--------------------------------------------------------------
+# Homescreen 2
+--------------------------------------------------------------*/
+.homescreen-2 { min-height: 600px; padding: 80px;}
+.homescreen-2 .tabs { position: relative; min-height: 200px; clear: both; margin: 25px 0; display: flex; justify-content: center; }
+.homescreen-2 .tab { float: left; }
+.homescreen-2 .tab label { font-family: 'Roboto', sans-serif; letter-spacing: 2px; text-align: center; text-transform: uppercase; color: #84878a; padding: 17px; margin-left: -1px; position: relative; left: 1px; }
+.homescreen-2 .tab [type=radio] { display: none; }
+.homescreen-2 .tab .content { display: none; position: absolute; top: 28px; left: 0; right: 0; bottom: 0; padding: 30px; }
+.homescreen-2 .tab [type=radio]:checked ~ label { color: #ff4438 !important; border-bottom: 2px solid #ff4438; z-index: 2; }
+.homescreen-2 .tab [type=radio]:checked ~ label ~ .content { display: block; z-index: 1; border-top: 1px solid #84878a; margin-top: 12px;  }
+.homescreen-2 h3 { margin-top: 0px; font-family: "Montserrat", Arial, Tahoma, sans-serif; font-weight: 300;font-size: 32px;color: #1a1b1c;}
+.homescreen-2 img { max-width: 600px; float: right; width: 100%; }
+.homescreen-2 p, .homescreen-2 ul li { font-family: 'Roboto', sans-serif; color: #9da3a3; font-size: 14px; }
+.homescreen-2 ul { margin: 0 0 1.5em 0.5em; }
+.homescreen-2 a { text-decoration: none; color: #ff4438; }
+@media screen and (max-width: 768px) {
+	.homescreen-2 { min-height: 850px; }
+	.homescreen-2 h3 { margin: 15px; }
+}
+@media screen and (max-width: 550px) {
+	.homescreen-2 .tab [type=radio]:checked ~ label { border: none; }
+	.homescreen-2 .tab [type=radio]:checked ~ label ~ .content { border: none; }
+	.homescreen-2 h3 { font-size: 18px; }
+}
+
+/*--------------------------------------------------------------
+# Homescreen 3
+--------------------------------------------------------------*/
+.homescreen-3 { min-height: 600px; padding: 80px; text-align: center; }
+.homescreen-3 h2 { font-size: 32px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: 40px;  }
+.homescreen-3-block { background-color: #fff; padding: 50px;}
+.homescreen-3-block.even { background-color: #f6f6f6; }
+.homescreen-3-block:hover { background-color: #e2e2e2; transition: background-color 0.5s ease;}
+.homescreen-3 a {text-decoration: none; color: inherit; }
+.homescreen-3 i { font-size: 80px; color:#ff4438; }
+.homescreen-3 h3 { font-size: 21px; line-height: 25px;  font-family: 'Montserrat', sans-serif; font-weight: normal; color: #1a1b1c; letter-spacing: 1px; text-transform: uppercase; }
+.homescreen-3 p { font-family: 'Roboto', sans-serif; color: #9da3a3; font-size: 14px; }
+@media screen and (max-width: 600px) {
+	.homescreen-3 i { font-size: 50px; }
+}
+
+/*--------------------------------------------------------------
+# Homescreen 4
+--------------------------------------------------------------*/
+.homescreen-4 { min-height: 600px; padding: 60px; max-width: 1140px; margin: 0 auto; }
+.homescreen-4 h2 { font-family: "Montserrat", Arial, Tahoma, sans-serif; font-weight: 300; font-size: 32px; line-height: 32px;
+	color: #1a1b1c; letter-spacing: 1px; text-transform: uppercase; text-align: center; margin-bottom: 70px;
+}
+.homescreen-4 h3.client { float:right;font-family: "Montserrat", Arial, Tahoma, sans-serif; font-weight: 300; font-size: 32px; line-height: 32px; color: #1a1b1c; text-align: right; margin: 0px; }
+.homescreen-4 p.client { display: block;float:right; text-align: right; color: #686f74; font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 26px; clear: both; }
+.homescreen-4 img.client {  float: left; }
+.homescreen-4 img.headshot { float: right; }
+.homescreen-4 p.quote { font-family: 'Lora', serif; font-style: italic; color: #686f74;}
+.homescreen-4 p.quotee { color: #000;}
+.cmuter-mt { margin: 60px 0; }
+.homescreen-4 a.read-more { border: 2px solid #ff4438; color: #ff4438; text-decoration: none; text-transform: uppercase; font-size: 14px; font-family: 'Roboto', sans-serif;
+	padding: 10px 20px; background: transparent; -webkit-border-radius: 3px; border-radius: 3px;
+}
+.homescreen-4 a.read-more:hover { background: #ff4438; color: #fff; }
+@media screen and (max-width: 575px) {
+	.homescreen-4 h3.client, .homescreen-4 p.client, .homescreen-4 img.client,
+	.homescreen-4 img.headshot, .homescreen-4 p.quote, .homescreen-4 p.quotee { float: none; text-align: center; }
+	.homescreen-4 .row { text-align: center; }
+}
+
+/*--------------------------------------------------------------
+# Homescreen 5
+--------------------------------------------------------------*/
+.homescreen-5 { min-height: 300px; padding: 60px; background: #ff4438; }
+.homescreen-5:hover {background: #ffab32;transition-timing-function: ease-in; -webkit-transition: 1s;  transition: 1s; }
+.homescreen-5-content {max-width: 300px; margin: 0 auto; text-align: center;}
+.homescreen-5 h3 { font-family: "Montserrat", Arial, Tahoma, sans-serif; font-weight: 300; font-size: 32px; color: #fff; text-transform: uppercase; line-height: 32px; }
+.homescreen-5 hr { height: 4px; background-color: #000; width: 150px;}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer-widgets { padding-top: 30px; }
+.footer-widgets ul.footer-links  { list-style: none; margin: 0; padding: 0; }
+.footer-widgets ul.footer-links li { list-style-image: url('../images/arrow.png'); }
+.footer-widgets ul.footer-links a,
+.footer-widgets p { color: #626263; font-family: 'Roboto', sans-serif; font-size: 12px; text-decoration: none; }
+.footer-widgets .textwidget a { color: #ff4438; text-decoration: none; }
+.footer-widgets .textwidget a:hover { color: #454545; text-decoration: underline; }
+.footer-widgets ul.footer-links a:hover { text-decoration: underline;}
+.footer-widgets h4.widget-title { margin-top: 0px; font-size: 15px; line-height: 15px; font-family: "Montserrat", Arial, Tahoma, sans-serif; font-weight: 300; color: #62626;}
+.footer-widgets p.contact-icons i { color: #fff; background-color: #777; border-radius: 50%; padding: 5px; margin: 0 5px; }
+footer { border-top: 1px solid rgba(0, 0, 0, 0.1); }
+.site-info { width: 94%; max-width: 1600px; margin: 0 auto; }
+.site-info p { font-family: 'Roboto', sans-serif; color: #9da3a3; font-size: 12px; }
